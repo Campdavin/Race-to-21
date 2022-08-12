@@ -49,7 +49,7 @@ function startGame() {
         // <img src= "C:\Users\Davin\Documents\Docs\CS\Black Jack Project\cards\7-S.png"
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "/C:/Users/Davin/Documents/Docs/CS/Black%20Jack%20Project/cards/" + card + ".png";
+        cardImg.src = "./cards/" + card + ".png";
         dealerSum += getValue(card);
         dealerAcecount += checkAce(card);
         document.getElementById("dealer-cards").append(cardImg);
@@ -59,7 +59,7 @@ function startGame() {
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "/C:/Users/Davin/Documents/Docs/CS/Black%20Jack%20Project/cards/" + card + ".png";
+        cardImg.src = "./cards/" + card + ".png";
         yourSum += getValue(card);
         yourAceCount += checkAce(card);
         document.getElementById("your-cards").append(cardImg);
@@ -75,7 +75,7 @@ function stay() {
     yourSum = reduceAce(yourSum, yourAceCount);
 
     canHit = false;
-    document.getElementById("hidden").src = "/C:/Users/Davin/Documents/Docs/CS/Black%20Jack%20Project/cards/" + hidden + ".png";
+    document.getElementById("hidden").src = "./cards/" + hidden + ".png";
 
     let message = "";
     if (yourSum > 21)
@@ -110,7 +110,7 @@ function hit() {
 
     let cardImg = document.createElement("img");
     let card = deck.pop();
-    cardImg.src = "/C:/Users/Davin/Documents/Docs/CS/Black%20Jack%20Project/cards/" + card + ".png";
+    cardImg.src = "./cards/" + card + ".png";
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("your-cards").append(cardImg);
